@@ -2,18 +2,20 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 <title>Mothers won(?) Mexico did not cut children´s classes for the World Cup</title>
 
 <style>
+
 :root{
-    --bg:#f5f5f3;
+    --bg:#f7f4ee;
+    --paper:#ffffff;
     --text:#111111;
-    --muted:#6b6b6b;
-    --line:#d9d9d9;
-    --accent:#b80000;
-    --max:820px;
+    --muted:#6c6c6c;
+    --border:#d8d2ca;
+    --accent:#8c0000;
+    --max-width:760px;
 }
 
 *{
@@ -22,195 +24,212 @@
     box-sizing:border-box;
 }
 
-html{
-    scroll-behavior:smooth;
-}
-
 body{
+    font-family: Georgia, "Times New Roman", serif;
     background:var(--bg);
     color:var(--text);
-    font-family: Inter, Helvetica, Arial, sans-serif;
-    line-height:1.8;
+    line-height:1.9;
     -webkit-font-smoothing:antialiased;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    color:inherit;
+}
+
+.topbar{
+    width:100%;
+    border-bottom:1px solid var(--border);
+    background:rgba(255,255,255,.95);
+    position:sticky;
+    top:0;
+    z-index:100;
+    backdrop-filter:blur(12px);
+}
+
+.topbar-inner{
+    max-width:1200px;
+    margin:auto;
+    padding:14px 24px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.brand{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:.9rem;
+    letter-spacing:.16em;
+    font-weight:800;
+    text-transform:uppercase;
+}
+
+.section-label{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:.8rem;
+    color:var(--muted);
+    letter-spacing:.1em;
+    text-transform:uppercase;
 }
 
 .hero{
     width:100%;
-    min-height:80vh;
-    position:relative;
-    display:flex;
-    align-items:flex-end;
-    overflow:hidden;
+    background:var(--paper);
+    border-bottom:1px solid var(--border);
 }
 
-.hero::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:
-        linear-gradient(to top, rgba(0,0,0,.78), rgba(0,0,0,.18)),
-        url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1600&auto=format&fit=crop');
-    background-size:cover;
-    background-position:center;
-    transform:scale(1.03);
-}
-
-.hero-content{
-    position:relative;
-    z-index:2;
+.hero-inner{
     max-width:1100px;
-    margin:0 auto;
-    width:100%;
-    padding:80px 24px;
-    color:white;
+    margin:auto;
+    padding:48px 24px 56px;
 }
 
 .kicker{
+    color:var(--accent);
+    font-family: Arial, Helvetica, sans-serif;
     text-transform:uppercase;
     letter-spacing:.12em;
     font-size:.78rem;
     font-weight:700;
     margin-bottom:18px;
-    opacity:.9;
 }
 
-.hero h1{
-    font-size:clamp(2.6rem,6vw,5.3rem);
+.headline{
+    font-size:clamp(2.4rem,5vw,5rem);
     line-height:1.02;
-    max-width:980px;
-    font-weight:800;
-    letter-spacing:-0.04em;
+    letter-spacing:-0.05em;
+    font-weight:700;
+    max-width:1000px;
     margin-bottom:28px;
 }
 
 .standfirst{
-    font-size:1.2rem;
-    max-width:760px;
-    color:rgba(255,255,255,.9);
+    font-size:1.28rem;
     line-height:1.7;
+    color:#2a2a2a;
+    max-width:860px;
+}
+
+.hero-image{
+    margin-top:44px;
+    background:#e9e5de;
+    border:1px solid var(--border);
+    aspect-ratio:16/8;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    overflow:hidden;
+}
+
+.hero-image::before{
+    content:"IMAGE PLACEHOLDER";
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:.9rem;
+    letter-spacing:.18em;
+    color:#888;
+}
+
+.caption{
+    font-size:.78rem;
+    color:var(--muted);
+    margin-top:10px;
+    line-height:1.5;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .article{
-    max-width:var(--max);
-    margin:0 auto;
-    padding:72px 24px 120px;
+    max-width:var(--max-width);
+    margin:auto;
+    padding:60px 24px 120px;
 }
 
-.byline{
+.meta{
     display:flex;
     justify-content:space-between;
-    align-items:center;
+    align-items:flex-start;
     gap:20px;
-    padding-bottom:32px;
-    margin-bottom:42px;
-    border-bottom:1px solid var(--line);
-    color:var(--muted);
-    font-size:.95rem;
+    margin-bottom:48px;
+    padding-bottom:28px;
+    border-bottom:1px solid var(--border);
 }
 
-.byline strong{
+.author{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:.92rem;
+    color:var(--muted);
+}
+
+.author strong{
     color:var(--text);
 }
 
 .article p{
-    margin-bottom:30px;
-    font-size:1.13rem;
+    font-size:1.16rem;
+    margin-bottom:34px;
 }
 
 .article h2{
-    font-size:2rem;
-    line-height:1.2;
-    margin-top:70px;
+    font-size:2.2rem;
+    line-height:1.15;
+    margin-top:80px;
     margin-bottom:28px;
-    letter-spacing:-0.03em;
+    letter-spacing:-0.04em;
 }
 
 blockquote{
-    margin:50px 0;
+    margin:56px 0;
     padding-left:28px;
-    border-left:4px solid var(--accent);
-    font-size:1.45rem;
-    line-height:1.6;
-    color:#222;
-    font-weight:500;
+    border-left:3px solid var(--accent);
+    font-size:1.5rem;
+    line-height:1.7;
+    color:#1c1c1c;
+    font-style:italic;
 }
 
-.figure{
-    margin:54px 0;
+.image-block{
+    margin:60px 0;
 }
 
-.figure img{
+.image-placeholder{
     width:100%;
-    border-radius:4px;
-    display:block;
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
-}
-
-.caption{
-    font-size:.83rem;
-    color:var(--muted);
-    margin-top:10px;
-    line-height:1.5;
-}
-
-.chart{
-    background:white;
-    border-radius:10px;
-    padding:30px;
-    margin:50px 0;
-    box-shadow:0 6px 24px rgba(0,0,0,.05);
-}
-
-.chart-title{
-    font-size:1rem;
-    font-weight:700;
-    margin-bottom:30px;
-}
-
-.bar-group{
-    margin-bottom:28px;
-}
-
-.label{
-    margin-bottom:10px;
-    font-size:.95rem;
-    font-weight:600;
-}
-
-.bar{
-    width:100%;
-    height:24px;
-    background:#ececec;
-    border-radius:100px;
+    background:#ece8e1;
+    border:1px solid var(--border);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
     overflow:hidden;
 }
 
-.fill{
-    height:100%;
-    border-radius:100px;
-    background:linear-gradient(90deg,#111,#666);
-    position:relative;
-    animation:grow 1.4s ease;
+.image-placeholder.large{
+    aspect-ratio:16/9;
 }
 
-.fill span{
-    position:absolute;
-    right:12px;
-    top:50%;
-    transform:translateY(-50%);
-    color:white;
-    font-size:.75rem;
-    font-weight:700;
+.image-placeholder.medium{
+    aspect-ratio:16/10;
 }
 
-@keyframes grow{
-    from{width:0}
+.image-placeholder.tall{
+    aspect-ratio:4/5;
+}
+
+.image-placeholder::before{
+    content:"ORIGINAL PDF IMAGE / GRAPHIC";
+    font-family:Arial, Helvetica, sans-serif;
+    letter-spacing:.14em;
+    font-size:.78rem;
+    color:#8a8a8a;
 }
 
 .divider{
     width:100%;
     height:1px;
-    background:var(--line);
+    background:var(--border);
     margin:90px 0 50px;
 }
 
@@ -221,15 +240,15 @@ blockquote{
 .methodology p,
 .methodology li{
     font-size:.98rem !important;
-    color:#333;
+    line-height:1.8;
 }
 
 .methodology h2{
-    font-size:1.7rem;
+    font-size:1.8rem;
 }
 
 .methodology ul{
-    margin:22px 0 30px 20px;
+    margin:20px 0 34px 22px;
 }
 
 .methodology li{
@@ -237,19 +256,13 @@ blockquote{
 }
 
 .references a{
-    color:#1a1a1a;
-    text-decoration:none;
     word-break:break-word;
-}
-
-.references a:hover{
-    text-decoration:underline;
 }
 
 .fade{
     opacity:0;
-    transform:translateY(30px);
-    transition:all .9s ease;
+    transform:translateY(24px);
+    transition:all .8s ease;
 }
 
 .fade.visible{
@@ -257,67 +270,105 @@ blockquote{
     transform:translateY(0);
 }
 
+footer{
+    border-top:1px solid var(--border);
+    padding:40px 24px;
+    background:#faf8f4;
+}
+
+.footer-inner{
+    max-width:1100px;
+    margin:auto;
+    font-family:Arial, Helvetica, sans-serif;
+    color:var(--muted);
+    font-size:.82rem;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+}
+
 @media(max-width:768px){
 
-    .hero{
-        min-height:72vh;
+    .hero-inner{
+        padding-top:34px;
     }
 
-    .hero-content{
-        padding:60px 22px;
+    .headline{
+        font-size:2.8rem;
     }
 
     .standfirst{
-        font-size:1.05rem;
-    }
-
-    .article{
-        padding-top:50px;
+        font-size:1.1rem;
     }
 
     .article p{
-        font-size:1.04rem;
+        font-size:1.05rem;
     }
 
     blockquote{
-        font-size:1.2rem;
+        font-size:1.22rem;
+        padding-left:18px;
     }
 
-    .chart{
-        padding:22px;
+    .meta{
+        flex-direction:column;
     }
+
 }
+
 </style>
 </head>
 
 <body>
 
-<header class="hero">
-    <div class="hero-content fade">
-        <div class="kicker">Gender Inequality • Mexico • Data Journalism</div>
+<header class="topbar">
+    <div class="topbar-inner">
+        <div class="brand">Editorial Feature</div>
+        <div class="section-label">Gender Inequality</div>
+    </div>
+</header>
 
-        <h1>
+<section class="hero">
+
+    <div class="hero-inner fade">
+
+        <div class="kicker">
+            Mexico • Education • Women • Data Story
+        </div>
+
+        <h1 class="headline">
             Mothers won(?) Mexico did not cut children´s classes for the World Cup, but the proposal reignited gender inequality in households
         </h1>
 
         <p class="standfirst">
             -Around 50% of women take charge of childcare and housework by themselves, the other half do it with help, and 1% of these tasks are done by men alone, in San Luis Potosí.
         </p>
-    </div>
-</header>
 
-<main class="article">
-
-    <section class="fade">
-        <div class="byline">
-            <div>
-                By <strong>Regina Arellano</strong>
-            </div>
-
-            <div>
+        <div class="image-block">
+            <div class="hero-image"></div>
+            <div class="caption">
                 Source: Pixabay
             </div>
         </div>
+
+    </div>
+
+</section>
+
+<main class="article">
+
+    <div class="meta fade">
+
+        <div class="author">
+            By <strong>Regina Arellano</strong>
+        </div>
+
+        <div class="author">
+            Long-form data journalism article
+        </div>
+
+    </div>
+
+    <section class="fade">
 
         <p>
             When the Public Education System in Mexico (SEP) announced that they would cut children´s classes for over a month for the World Cup, Nancy Hernández, an important Mexican journalist, newsroom coordinator and a mother of three kids, got worried:
@@ -330,6 +381,7 @@ blockquote{
         <p>
             In less than a week, the Mexican government retracted its decision after a strong backlash from teachers, parents and the community, who not only criticised the consequences on children´s education, but also on family dynamics and the invisible burden on women.
         </p>
+
     </section>
 
     <section class="fade">
@@ -369,6 +421,7 @@ blockquote{
         <p>
             Even if this decision was revoked, and the school calendar will be done as usual, this issue reopened a debate within the gender roles and who holds the most responsibilities in Mexican households.
         </p>
+
     </section>
 
     <section class="fade">
@@ -381,38 +434,15 @@ blockquote{
             According to the from National Survey on the Dynamics of Household Relationships (ENDIREH) last held in 2021, in San Luis Potosí (the state where Nancy Hernández lives), women do more housework and childcare by themselves than men alone, even if women are married or live in concubinage.
         </p>
 
-        <div class="chart">
-            <div class="chart-title">
-                Childcare and housework responsibilities in San Luis Potosí
+        <div class="image-block">
+            <div class="image-placeholder large"></div>
+            <div class="caption">
+                Own elaboration. Retrieved Data from National Survey on the Dynamics of Household Relationships (ENDIREH) 2021
             </div>
+        </div>
 
-            <div class="bar-group">
-                <div class="label">Women alone</div>
-                <div class="bar">
-                    <div class="fill" style="width:50%;">
-                        <span>50%</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bar-group">
-                <div class="label">Shared responsibilities</div>
-                <div class="bar">
-                    <div class="fill" style="width:49%;">
-                        <span>49%</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bar-group">
-                <div class="label">Men alone</div>
-                <div class="bar">
-                    <div class="fill" style="width:1%;">
-                        <span>1%</span>
-                    </div>
-                </div>
-            </div>
-
+        <div class="image-block">
+            <div class="image-placeholder medium"></div>
             <div class="caption">
                 Own elaboration. Retrieved Data from National Survey on the Dynamics of Household Relationships (ENDIREH) 2021
             </div>
@@ -430,29 +460,8 @@ blockquote{
             Now, according to the Encuesta Nacional de Ocupación y Empleo (2021), in 2021 , 40% of the workforce is women, whereas 60% correspond to men. If we combine the 3 sources of information, we can see that women, despite holding a great percentage of household duties, still make up almost reach 50% of the workforce, in San Luis Potosí.
         </p>
 
-        <div class="chart">
-            <div class="chart-title">
-                Workforce participation in San Luis Potosí (2021)
-            </div>
-
-            <div class="bar-group">
-                <div class="label">Women workforce participation</div>
-                <div class="bar">
-                    <div class="fill" style="width:40%;">
-                        <span>40%</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bar-group">
-                <div class="label">Men workforce participation</div>
-                <div class="bar">
-                    <div class="fill" style="width:60%;">
-                        <span>60%</span>
-                    </div>
-                </div>
-            </div>
-
+        <div class="image-block">
+            <div class="image-placeholder large"></div>
             <div class="caption">
                 Own elaboration. Retrieved Data from National Survey on the Dynamics of Household Relationships (ENDIREH) 2021 and Encuesta Nacional de Ocupación y Empleo. Conjunto de datos: Población ocupada (INEGI) 2021.
             </div>
@@ -500,7 +509,9 @@ blockquote{
 
     <section class="methodology fade">
 
-        <h2>Methodology</h2>
+        <h2>
+            Methodology
+        </h2>
 
         <p>
             This news story was about highlighting Gender inequality discussions after the Mexican government's proposal to cancel kids ‘classes because of the World Cup To raise awareness on the role of women in childcare, housework, revealing gender inequality in Mexican households, specifically in my state, San Luis Potosí.
@@ -535,7 +546,9 @@ blockquote{
             <strong>Intended impact:</strong> For people to reflect on gender inequality and make fewer judgments about women.
         </p>
 
-        <h2>AI Acknowledgment</h2>
+        <h2>
+            AI Acknowledgment
+        </h2>
 
         <p><strong>Use of:</strong></p>
 
@@ -548,7 +561,9 @@ blockquote{
             <li>Google Pinpoint to transcribe the interview from audio to text.</li>
         </ul>
 
-        <h2>References</h2>
+        <h2>
+            References
+        </h2>
 
         <div class="references">
 
@@ -557,9 +572,7 @@ blockquote{
             </p>
 
             <p>
-                <a href="https://www.inegi.org.mx/programas/endireh/2021/#microdatos" target="_blank">
-                    https://www.inegi.org.mx/programas/endireh/2021/#microdatos
-                </a>
+                https://www.inegi.org.mx/programas/endireh/2021/#microdatos
             </p>
 
             <p>
@@ -567,9 +580,7 @@ blockquote{
             </p>
 
             <p>
-                <a href="https://www.inegi.org.mx/sistemas/olap/proyectos/bd/encuestas/hogares/enoe/2010_pe_ed15/po.asp?s=est&proy=enoe_pe_ed15_po&p=enoe_pe_ed15" target="_blank">
-                    https://www.inegi.org.mx/sistemas/olap/proyectos/bd/encuestas/hogares/enoe/2010_pe_ed15/po.asp?s=est&proy=enoe_pe_ed15_po&p=enoe_pe_ed15
-                </a>
+                https://www.inegi.org.mx/sistemas/olap/proyectos/bd/encuestas/hogares/enoe/2010_pe_ed15/po.asp?s=est&proy=enoe_pe_ed15_po&p=enoe_pe_ed15
             </p>
 
             <p>
@@ -577,9 +588,7 @@ blockquote{
             </p>
 
             <p>
-                <a href="https://www.facebook.com/photo?fbid=1628988415408492&set=a.555393136101364" target="_blank">
-                    https://www.facebook.com/photo?fbid=1628988415408492&set=a.555393136101364
-                </a>
+                https://www.facebook.com/photo?fbid=1628988415408492&set=a.555393136101364
             </p>
 
             <p>
@@ -587,9 +596,7 @@ blockquote{
             </p>
 
             <p>
-                <a href="https://www.facebook.com/24morelos/videos/la-escuela-no-es-guarder%C3%ADa-afirma-titular-de-la-sepel-titular-de-la-sep-mario-de/3385537051602593/" target="_blank">
-                    https://www.facebook.com/24morelos/videos/la-escuela-no-es-guarder%C3%ADa-afirma-titular-de-la-sepel-titular-de-la-sep-mario-de/3385537051602593/
-                </a>
+                https://www.facebook.com/24morelos/videos/la-escuela-no-es-guarder%C3%ADa-afirma-titular-de-la-sepel-titular-de-la-sep-mario-de/3385537051602593/
             </p>
 
         </div>
@@ -598,27 +605,28 @@ blockquote{
 
 </main>
 
+<footer>
+    <div class="footer-inner">
+        Editorial long-form feature • Responsive single-file experience
+    </div>
+</footer>
+
 <script>
-const faders = document.querySelectorAll('.fade');
 
-const appearOptions = {
-    threshold: 0.1
-};
+const fadeElements = document.querySelectorAll('.fade');
 
-const appearOnScroll = new IntersectionObserver(function(entries, observer){
+const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-        if(!entry.isIntersecting){
-            return;
-        } else {
+        if(entry.isIntersecting){
             entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
         }
     });
-}, appearOptions);
-
-faders.forEach(fader => {
-    appearOnScroll.observe(fader);
+}, {
+    threshold:0.1
 });
+
+fadeElements.forEach(el => observer.observe(el));
+
 </script>
 
 </body>
