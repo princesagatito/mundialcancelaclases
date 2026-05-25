@@ -197,6 +197,7 @@
             overflow: hidden;
             width: 100%;
             transition: background-color 0.3s ease;
+            aspect-ratio: 16 / 9;
         }
 
         .image-placeholder:hover {
@@ -204,26 +205,12 @@
         }
 
         .image-placeholder::before {
-            content: 'IMAGE PLACEHOLDER';
+            content: 'PLACEHOLDER';
             font-family: 'Source Sans 3', sans-serif;
             font-size: 0.85rem;
             letter-spacing: 2px;
             color: #888;
             font-weight: 600;
-        }
-
-        .img-aspect-hero {
-            aspect-ratio: 3 / 2;
-        }
-
-        .img-aspect-chart1 {
-            aspect-ratio: 1 / 1;
-            max-width: 550px;
-            margin: 0 auto;
-        }
-
-        .img-aspect-chart2 {
-            aspect-ratio: 4 / 3;
         }
 
         .caption {
@@ -234,10 +221,6 @@
             margin-top: 0.5rem;
             text-align: left;
             width: 100%;
-        }
-
-        .chart-grid {
-            margin: 2.5rem 0;
         }
 
         .methodology-separator {
@@ -357,7 +340,7 @@
 
             <div class="article-body">
                 <div class="media-container">
-                    <div class="image-placeholder img-aspect-hero"></div>
+                    <div class="image-placeholder"></div>
                     <div class="caption">Source: Pixabay</div>
                 </div>
 
@@ -399,11 +382,9 @@
 
                 <p>According to the from National Survey on the Dynamics of Household Relationships (ENDIREH) last held in 2021, in San Luis Potosí (the state where Nancy Hernández lives), women do more housework and childcare by themselves than men alone, even if women are married or live in concubinage.</p>
 
-                <div class="chart-grid">
-                    <div class="media-container">
-                        <div class="image-placeholder img-aspect-chart1"></div>
-                        <div class="caption">Value<br>Who takes care of the Children in San Luis Potosí, México?<br>Who is in charge of the housework in San Luis Potosí, México?<br>2400<br>1400<br>13:00<br>1200<br>1100<br>1000<br>900<br>600<br>697<br>プロロ<br>660<br>500<br>400<br>200<br>100<br>0<br>14<br>By Men<br>By Women<br>Shared responsability<br>Total<br>1,371<br>2200<br>Value<br>2000<br>1800<br>1600<br>1400<br>1200<br>1,154<br>1,066<br>1000<br>800<br>600<br>400<br>200<br>21<br>Sy meo only<br>Bly women orily<br>Shared responsibility<br>Total<br>2.241<br>Own elaboration. Retrieved Data from National Survey on the Dynamics of Household Relationships (ENDIREH) 2021<br>Own elaboration. Retrieved Data from National Survey on the Dynamics of Household Relationships (ENDIREH) 2021</div>
-                    </div>
+                <div class="media-container">
+                    <div class="image-placeholder"></div>
+                    <div class="caption">Value<br>Who takes care of the Children in San Luis Potosí, México?<br>Who is in charge of the housework in San Luis Potosí, México?<br>2400<br>1400<br>13:00<br>1200<br>1100<br>1000<br>900<br>600<br>697<br>プロロ<br>660<br>500<br>400<br>200<br>100<br>0<br>14<br>By Men<br>By Women<br>Shared responsability<br>Total<br>1,371<br>2200<br>Value<br>2000<br>1800<br>1600<br>1400<br>1200<br>1,154<br>1,066<br>1000<br>800<br>600<br>400<br>200<br>21<br>Sy meo only<br>Bly women orily<br>Shared responsibility<br>Total<br>2.241<br>Own elaboration. Retrieved Data from National Survey on the Dynamics of Household Relationships (ENDIREH) 2021<br>Own elaboration. Retrieved Data from National Survey on the Dynamics of Household Relationships (ENDIREH) 2021</div>
                 </div>
 
                 <p>However, a great percentage of these responsibilities is shared. The survey gave women the opportunity to report if someone was helping them, either her husband or someone else.</p>
@@ -415,7 +396,7 @@
                 <p>If we combine the 3 sources of information, we can see that women, despite holding a great percentage of household duties, still make up almost reach 50% of the workforce, in San Luis Potosí.</p>
 
                 <div class="media-container">
-                    <div class="image-placeholder img-aspect-chart2"></div>
+                    <div class="image-placeholder"></div>
                     <div class="caption">Children care, housework and employment by women, men and shared responsibility, 2021<br>Percentage 1<br>65<br>60<br>55<br>50<br>45<br>40<br>35<br>25<br>20<br>15<br>10<br>5<br>Children Care<br>51<br>48<br>40<br>Activity/Gender<br>Employed<br>60<br>Housework<br>48<br>51<br>1<br>0<br>Men<br>Women<br>Wamen<br>Men<br>1<br>Men<br>Shared responsability<br>Wamen<br>Shared responsability<br>Own elaboration. Retrieved Data from National Survey on the Dynamics of Household Relationships (ENDIREH) 2021 and Encuesta Nacional de Ocupación y Empleo.<br>Conjunto de datos: Población ocupada (INEGI) 2021.</div>
                 </div>
 
@@ -487,7 +468,7 @@
                     <li>Instituto Nacional de Estadística y Geografía. <a href="https://www.inegi.org.mx/programas/endireh/2021/#microdatos" class="ref-link">https://www.inegi.org.mx/programas/endireh/2021/#microdatos</a></li>
                     <li>INEGI (2021). Encuesta Nacional de Ocupación y Empleo. Conjunto de datos: Población ocupada. [Data set]. Instituto Nacional de Estadística y Geografía.</li>
                     <li><a href="https://www.inegi.org.mx/sistemas/olap/proyectos/bd/encuestas/hogares/enoe/2010_pe_ed15/po.asp?s=est&proy=enoe%20pe%20ed15%20po&p=enoe%20pe_ed15" class="ref-link">https://www.inegi.org.mx/sistemas/olap/proyectos/bd/encuestas/hogares/enoe/2010_pe_ed15/po.asp?s=est&proy=enoe pe ed15 po&p=enoe pe_ed15</a></li>
-                    <li>Red Mujeres Unidas por la Educación. (2026, May 9). POSICIONAMIENTO DE LA RED DE MUJERES UNIDAS POR LA EDUCACIÓN Adelantar el cierre del ciclo escolar también es una decisión [Facebook Post]. Facebook. <a href="https://www.facebook.com/photo?fbid=1628988415408492&set=a.555393136101364" class="ref-link">https://www.facebook.com/photo?fbid=1628988415408492&set=a.555393136101364</a> [Facebook Post].</li>
+                    <li>Red Mujeres Unidas por la Educación. (2026, May 9). POSICIONAMIENTO DE LA RED DE MUJERES UNIDAS POR LA EDUCACIÓN Adelantar el cierre del ciclo escolar también es una decision [Facebook Post]. Facebook. <a href="https://www.facebook.com/photo?fbid=1628988415408492&set=a.555393136101364" class="ref-link">https://www.facebook.com/photo?fbid=1628988415408492&set=a.555393136101364</a> [Facebook Post].</li>
                     <li>24 Morelos. (2026, May 12). LA ESCUELA NO ES GUARDERÍA, AFIRMA TITULAR DE LA SEP El titular de the SEP, Mario Delgado, señaló que la [Facebook Facebook. <a href="https://www.facebook.com/24morelos/videos/la-escuela-no-es-guarder%C3%ADa-afirma-titular-de-la-sepel-titular-de-la-sep-mario-de/3385537051602593/" class="ref-link">https://www.facebook.com/24morelos/videos/la-escuela-no-es-guarder%C3%ADa-afirma-titular-de-la-sepel-titular-de-la-sep-mario-de/3385537051602593/</a></li>
                 </ul>
             </div>
