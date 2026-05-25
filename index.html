@@ -6,18 +6,16 @@
 
 <title>Mothers won(?) Mexico did not cut children´s classes for the World Cup</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
 <style>
 
 :root{
-    --bg:#f5f3ef;
+    --bg:#f7f4ee;
+    --paper:#ffffff;
     --text:#111111;
-    --muted:#6e6e6e;
-    --line:#d6d2cb;
-    --accent:#7d0f0f;
-    --max-width:860px;
+    --muted:#6c6c6c;
+    --border:#d8d2ca;
+    --accent:#8c0000;
+    --max-width:760px;
 }
 
 *{
@@ -26,245 +24,245 @@
     box-sizing:border-box;
 }
 
-html{
-    scroll-behavior:smooth;
-}
-
 body{
+    font-family: Georgia, "Times New Roman", serif;
     background:var(--bg);
     color:var(--text);
-    font-family:'Inter', sans-serif;
-    line-height:1.8;
-    overflow-x:hidden;
+    line-height:1.9;
+    -webkit-font-smoothing:antialiased;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    color:inherit;
 }
 
 .topbar{
     width:100%;
-    border-bottom:1px solid rgba(0,0,0,0.08);
-    padding:18px 5vw;
-    background:white;
+    border-bottom:1px solid var(--border);
+    background:rgba(255,255,255,.95);
     position:sticky;
     top:0;
-    z-index:1000;
-    backdrop-filter:blur(10px);
+    z-index:100;
+    backdrop-filter:blur(12px);
 }
 
 .topbar-inner{
-    max-width:1300px;
+    max-width:1200px;
     margin:auto;
+    padding:14px 24px;
     display:flex;
     justify-content:space-between;
     align-items:center;
 }
 
 .brand{
-    font-size:0.95rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:.9rem;
+    letter-spacing:.16em;
     font-weight:800;
-    letter-spacing:2px;
     text-transform:uppercase;
 }
 
-.section-tag{
-    font-size:0.8rem;
+.section-label{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:.8rem;
     color:var(--muted);
+    letter-spacing:.1em;
     text-transform:uppercase;
-    letter-spacing:1px;
 }
 
 .hero{
     width:100%;
-    padding:90px 5vw 50px;
+    background:var(--paper);
+    border-bottom:1px solid var(--border);
 }
 
 .hero-inner{
-    max-width:1200px;
+    max-width:1100px;
     margin:auto;
+    padding:48px 24px 56px;
 }
 
 .kicker{
     color:var(--accent);
-    font-weight:700;
-    letter-spacing:1px;
+    font-family: Arial, Helvetica, sans-serif;
     text-transform:uppercase;
-    font-size:0.82rem;
-    margin-bottom:22px;
+    letter-spacing:.12em;
+    font-size:.78rem;
+    font-weight:700;
+    margin-bottom:18px;
 }
 
-.hero h1{
-    font-size:clamp(3rem, 6vw, 6rem);
-    line-height:0.98;
-    font-weight:800;
-    max-width:1100px;
-    margin-bottom:36px;
-    letter-spacing:-2px;
+.headline{
+    font-size:clamp(2.4rem,5vw,5rem);
+    line-height:1.02;
+    letter-spacing:-0.05em;
+    font-weight:700;
+    max-width:1000px;
+    margin-bottom:28px;
 }
 
 .standfirst{
-    max-width:760px;
     font-size:1.28rem;
-    line-height:1.8;
+    line-height:1.7;
     color:#2a2a2a;
-    font-weight:400;
+    max-width:860px;
+}
+
+.hero-image{
+    margin-top:44px;
+    background:#e9e5de;
+    border:1px solid var(--border);
+    aspect-ratio:16/8;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    overflow:hidden;
+}
+
+.hero-image::before{
+    content:"IMAGE PLACEHOLDER";
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:.9rem;
+    letter-spacing:.18em;
+    color:#888;
+}
+
+.caption{
+    font-size:.78rem;
+    color:var(--muted);
+    margin-top:10px;
+    line-height:1.5;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .article{
-    width:100%;
-    display:flex;
-    justify-content:center;
-}
-
-.article-inner{
-    width:100%;
     max-width:var(--max-width);
-    padding:50px 24px 120px;
+    margin:auto;
+    padding:60px 24px 120px;
 }
 
 .meta{
     display:flex;
     justify-content:space-between;
+    align-items:flex-start;
     gap:20px;
-    flex-wrap:wrap;
-    border-bottom:1px solid var(--line);
-    padding-bottom:24px;
-    margin-bottom:60px;
+    margin-bottom:48px;
+    padding-bottom:28px;
+    border-bottom:1px solid var(--border);
+}
+
+.author{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:.92rem;
     color:var(--muted);
-    font-size:0.95rem;
 }
 
-p{
-    font-size:1.12rem;
+.author strong{
+    color:var(--text);
+}
+
+.article p{
+    font-size:1.16rem;
     margin-bottom:34px;
-    color:#171717;
 }
 
-.section-title{
+.article h2{
     font-size:2.2rem;
-    line-height:1.2;
-    margin-top:95px;
-    margin-bottom:34px;
-    font-weight:800;
-    letter-spacing:-1px;
+    line-height:1.15;
+    margin-top:80px;
+    margin-bottom:28px;
+    letter-spacing:-0.04em;
 }
 
-.quote{
-    font-size:1.52rem;
-    line-height:1.85;
-    margin:65px 0;
-    padding-left:34px;
-    border-left:5px solid var(--accent);
-    font-weight:500;
-    color:#111;
+blockquote{
+    margin:56px 0;
+    padding-left:28px;
+    border-left:3px solid var(--accent);
+    font-size:1.5rem;
+    line-height:1.7;
+    color:#1c1c1c;
+    font-style:italic;
 }
 
 .image-block{
-    margin:70px 0;
+    margin:60px 0;
 }
 
 .image-placeholder{
     width:100%;
-    height:500px;
-    background:linear-gradient(135deg,#d3d3d3,#b9b9b9);
-    border-radius:2px;
+    background:#ece8e1;
+    border:1px solid var(--border);
     display:flex;
     align-items:center;
     justify-content:center;
-    color:#666;
-    font-size:0.9rem;
-    text-transform:uppercase;
-    letter-spacing:2px;
-}
-
-.caption{
-    font-size:0.82rem;
-    color:#7a7a7a;
-    margin-top:12px;
-    line-height:1.5;
-}
-
-.chart-box{
-    margin:70px 0;
-    background:white;
-    border:1px solid #ece8e1;
-    padding:40px;
-}
-
-.chart-title{
-    font-size:1rem;
-    font-weight:700;
-    margin-bottom:34px;
-}
-
-.bar-group{
-    margin-bottom:28px;
-}
-
-.bar-label{
-    display:flex;
-    justify-content:space-between;
-    margin-bottom:10px;
-    font-size:0.95rem;
-    font-weight:600;
-}
-
-.bar{
-    width:100%;
-    height:15px;
-    background:#ececec;
+    position:relative;
     overflow:hidden;
 }
 
-.bar-fill{
-    height:100%;
-    background:#161616;
-    animation:grow 1.4s ease;
+.image-placeholder.large{
+    aspect-ratio:16/9;
+}
+
+.image-placeholder.medium{
+    aspect-ratio:16/10;
+}
+
+.image-placeholder.tall{
+    aspect-ratio:4/5;
+}
+
+.image-placeholder::before{
+    content:"ORIGINAL PDF IMAGE / GRAPHIC";
+    font-family:Arial, Helvetica, sans-serif;
+    letter-spacing:.14em;
+    font-size:.78rem;
+    color:#8a8a8a;
 }
 
 .divider{
     width:100%;
-    border-top:1px solid var(--line);
-    margin:110px 0 70px;
+    height:1px;
+    background:var(--border);
+    margin:90px 0 50px;
 }
 
 .methodology{
-    font-size:0.97rem;
+    font-size:.98rem;
 }
 
-.methodology p{
-    font-size:0.97rem;
-    margin-bottom:26px;
-}
-
-.methodology h3{
-    font-size:0.92rem;
-    letter-spacing:1px;
-    text-transform:uppercase;
-    margin-top:36px;
-    margin-bottom:10px;
-    color:#444;
-}
-
-.references{
-    margin-top:55px;
-}
-
-.references p{
-    font-size:0.93rem;
+.methodology p,
+.methodology li{
+    font-size:.98rem !important;
     line-height:1.8;
-    word-break:break-word;
 }
 
-footer{
-    border-top:1px solid var(--line);
-    margin-top:100px;
-    padding-top:40px;
-    color:#777;
-    font-size:0.9rem;
+.methodology h2{
+    font-size:1.8rem;
+}
+
+.methodology ul{
+    margin:20px 0 34px 22px;
+}
+
+.methodology li{
+    margin-bottom:12px;
+}
+
+.references a{
+    word-break:break-word;
 }
 
 .fade{
     opacity:0;
-    transform:translateY(40px);
-    transition:all 0.8s ease;
+    transform:translateY(24px);
+    transition:all .8s ease;
 }
 
 .fade.visible{
@@ -272,42 +270,47 @@ footer{
     transform:translateY(0);
 }
 
-@keyframes grow{
-    from{
-        width:0;
-    }
+footer{
+    border-top:1px solid var(--border);
+    padding:40px 24px;
+    background:#faf8f4;
+}
+
+.footer-inner{
+    max-width:1100px;
+    margin:auto;
+    font-family:Arial, Helvetica, sans-serif;
+    color:var(--muted);
+    font-size:.82rem;
+    letter-spacing:.04em;
+    text-transform:uppercase;
 }
 
 @media(max-width:768px){
 
-    .hero{
-        padding-top:60px;
+    .hero-inner{
+        padding-top:34px;
     }
 
-    .hero h1{
-        letter-spacing:-1px;
+    .headline{
+        font-size:2.8rem;
     }
 
     .standfirst{
-        font-size:1.08rem;
+        font-size:1.1rem;
     }
 
-    p{
-        font-size:1.02rem;
+    .article p{
+        font-size:1.05rem;
     }
 
-    .quote{
-        font-size:1.25rem;
-        padding-left:22px;
-        margin:50px 0;
+    blockquote{
+        font-size:1.22rem;
+        padding-left:18px;
     }
 
-    .image-placeholder{
-        height:280px;
-    }
-
-    .chart-box{
-        padding:24px;
+    .meta{
+        flex-direction:column;
     }
 
 }
@@ -317,243 +320,196 @@ footer{
 
 <body>
 
-<div class="topbar">
+<header class="topbar">
     <div class="topbar-inner">
         <div class="brand">Editorial Feature</div>
-        <div class="section-tag">Data Journalism</div>
+        <div class="section-label">Gender Inequality</div>
     </div>
-</div>
+</header>
 
 <section class="hero">
-    <div class="hero-inner">
+
+    <div class="hero-inner fade">
 
         <div class="kicker">
-            Social Inequality • Mexico • Gender
+            Mexico • Education • Women • Data Story
         </div>
 
-        <h1>
+        <h1 class="headline">
             Mothers won(?) Mexico did not cut children´s classes for the World Cup, but the proposal reignited gender inequality in households
         </h1>
 
-        <div class="standfirst">
+        <p class="standfirst">
             -Around 50% of women take charge of childcare and housework by themselves, the other half do it with help, and 1% of these tasks are done by men alone, in San Luis Potosí.
+        </p>
+
+        <div class="image-block">
+            <div class="hero-image"></div>
+            <div class="caption">
+                Source: Pixabay
+            </div>
         </div>
 
     </div>
+
 </section>
 
 <main class="article">
-<div class="article-inner">
 
-    <div class="meta">
-        <div><strong>Regina Arellano</strong></div>
-        <div>Source: Pixabay</div>
-    </div>
+    <div class="meta fade">
 
-    <div class="image-block fade">
-        <div class="image-placeholder">
-            IMAGE PLACEHOLDER
-        </div>
-        <div class="caption">
-            Source: Pixabay
-        </div>
-    </div>
-
-    <p class="fade">
-        When the Public Education System in Mexico (SEP) announced that they would cut children´s classes for over a month for the World Cup, Nancy Hernández, an important Mexican journalist, newsroom coordinator and a mother of three kids, got worried:
-    </p>
-
-    <div class="quote fade">
-        “3 months, what am I going to do (with them) for 3 months, how am I going to be able to work?”
-    </div>
-
-    <p class="fade">
-        In less than a week, the Mexican government retracted its decision after a strong backlash from teachers, parents and the community, who not only criticised the consequences on children´s education, but also on family dynamics and the invisible burden on women.
-    </p>
-
-    <div class="quote fade">
-        “Who will take care of the millions of children during this additional month without class? Who will reorganize schedules, jobs, transports and family economies? Who will absorb care jobs that the State decided to translate silently into households? Who will have to ask for permissions, days off at work or refuse certain income? The answer is, one more time, women (…) and no one consulted or listened to them.”
-    </div>
-
-    <p class="fade">
-        This statement was published by Red de Mujeres Unidas por la Educación, one of the organisations that worried about the consequences this decision would have on women.
-    </p>
-
-    <p class="fade">
-        Nancy Hernández is one of those women. As a journalist, her daily life consists of a complex task of juggling her work life and motherhood, as millions of women in México.
-    </p>
-
-    <div class="quote fade">
-        “There are times when I need to take my kids to the office, because in journalism there are always last-minute calls, a video, an interview or urgent things (…) that I cannot postpone. And if that information emerges in the middle of my activities as a mom, I have to pause this to attend to my job. So, this is when it gets complicated.”
-    </div>
-
-    <p class="fade">
-        Her life is a constant evaluation of when she can or cannot be replaceable.
-    </p>
-
-    <div class="quote fade">
-        “And there are some things with my sons where I cannot be replaced, you know? I try to always evaluate that. If I cannot be replaced in this or that with my son, I look for ways to accommodate myself, and I agree with my husband, so he steps up as well.”
-    </div>
-
-    <p class="fade">
-        Nancy reflected that, fortunately, she has a support network that helps her to take care of her children when her schedule. Her husband is her principal support, but she also has the help of the children´s grandparents.
-    </p>
-
-    <div class="quote fade">
-        “There is a moment when you realise that you cannot do everything by yourself, even if you try hard enough. After all, everyone is expecting you to do it. It is very stigmatised… the belief that mothers can do everything, that they are superheroes. We carry on with that, and we make the effort to comply with that stigma.”
-    </div>
-
-    <p class="fade">
-        Even if this decision was revoked, and the school calendar will be done as usual, this issue reopened a debate within the gender roles and who holds the most responsibilities in Mexican households.
-    </p>
-
-    <h2 class="section-title fade">
-        Who holds the burden of housework and childcare in San Luis Potosí, México?
-    </h2>
-
-    <p class="fade">
-        According to the from National Survey on the Dynamics of Household Relationships (ENDIREH) last held in 2021, in San Luis Potosí (the state where Nancy Hernández lives), women do more housework and childcare by themselves than men alone, even if women are married or live in concubinage.
-    </p>
-
-    <div class="image-block fade">
-        <div class="image-placeholder">
-            CHART / GRAPHIC PLACEHOLDER
-        </div>
-        <div class="caption">
-            Own elaboration. Retrieved Data from National Survey on the Dynamics of Household Relationships (ENDIREH) 2021
-        </div>
-    </div>
-
-    <div class="chart-box fade">
-
-        <div class="chart-title">
-            Childcare and Housework Responsibilities in San Luis Potosí
+        <div class="author">
+            By <strong>Regina Arellano</strong>
         </div>
 
-        <div class="bar-group">
-            <div class="bar-label">
-                <span>Women alone</span>
-                <span>50%</span>
-            </div>
+        <div class="author">
+            Long-form data journalism article
+        </div>
 
-            <div class="bar">
-                <div class="bar-fill" style="width:50%;"></div>
+    </div>
+
+    <section class="fade">
+
+        <p>
+            When the Public Education System in Mexico (SEP) announced that they would cut children´s classes for over a month for the World Cup, Nancy Hernández, an important Mexican journalist, newsroom coordinator and a mother of three kids, got worried:
+        </p>
+
+        <blockquote>
+            “3 months, what am I going to do (with them) for 3 months, how am I going to be able to work?”
+        </blockquote>
+
+        <p>
+            In less than a week, the Mexican government retracted its decision after a strong backlash from teachers, parents and the community, who not only criticised the consequences on children´s education, but also on family dynamics and the invisible burden on women.
+        </p>
+
+    </section>
+
+    <section class="fade">
+
+        <blockquote>
+            “Who will take care of the millions of children during this additional month without class? Who will reorganize schedules, jobs, transports and family economies? Who will absorb care jobs that the State decided to translate silently into households? Who will have to ask for permissions, days off at work or refuse certain income? The answer is, one more time, women (…) and no one consulted or listened to them.”
+        </blockquote>
+
+        <p>
+            This statement was published by Red de Mujeres Unidas por la Educación, one of the organisations that worried about the consequences this decision would have on women.
+        </p>
+
+        <p>
+            Nancy Hernández is one of those women. As a journalist, her daily life consists of a complex task of juggling her work life and motherhood, as millions of women in México.
+        </p>
+
+        <blockquote>
+            “There are times when I need to take my kids to the office, because in journalism there are always last-minute calls, a video, an interview or urgent things (…) that I cannot postpone. And if that information emerges in the middle of my activities as a mom, I have to pause this to attend to my job. So, this is when it gets complicated.”
+        </blockquote>
+
+        <p>
+            Her life is a constant evaluation of when she can or cannot be replaceable.
+        </p>
+
+        <blockquote>
+            “And there are some things with my sons where I cannot be replaced, you know? I try to always evaluate that. If I cannot be replaced in this or that with my son, I look for ways to accommodate myself, and I agree with my husband, so he steps up as well.”
+        </blockquote>
+
+        <p>
+            Nancy reflected that, fortunately, she has a support network that helps her to take care of her children when her schedule. Her husband is her principal support, but she also has the help of the children´s grandparents.
+        </p>
+
+        <blockquote>
+            “There is a moment when you realise that you cannot do everything by yourself, even if you try hard enough. After all, everyone is expecting you to do it. It is very stigmatised… the belief that mothers can do everything, that they are superheroes. We carry on with that, and we make the effort to comply with that stigma.”
+        </blockquote>
+
+        <p>
+            Even if this decision was revoked, and the school calendar will be done as usual, this issue reopened a debate within the gender roles and who holds the most responsibilities in Mexican households.
+        </p>
+
+    </section>
+
+    <section class="fade">
+
+        <h2>
+            Who holds the burden of housework and childcare in San Luis Potosí, México?
+        </h2>
+
+        <p>
+            According to the from National Survey on the Dynamics of Household Relationships (ENDIREH) last held in 2021, in San Luis Potosí (the state where Nancy Hernández lives), women do more housework and childcare by themselves than men alone, even if women are married or live in concubinage.
+        </p>
+
+        <div class="image-block">
+            <div class="image-placeholder large"></div>
+            <div class="caption">
+                Own elaboration. Retrieved Data from National Survey on the Dynamics of Household Relationships (ENDIREH) 2021
             </div>
         </div>
 
-        <div class="bar-group">
-            <div class="bar-label">
-                <span>Shared responsibility</span>
-                <span>49%</span>
-            </div>
-
-            <div class="bar">
-                <div class="bar-fill" style="width:49%;"></div>
+        <div class="image-block">
+            <div class="image-placeholder medium"></div>
+            <div class="caption">
+                Own elaboration. Retrieved Data from National Survey on the Dynamics of Household Relationships (ENDIREH) 2021
             </div>
         </div>
 
-        <div class="bar-group">
-            <div class="bar-label">
-                <span>Men alone</span>
-                <span>1%</span>
-            </div>
+        <p>
+            However, a great percentage of these responsibilities is shared. The survey gave women the opportunity to report if someone was helping them, either her husband or someone else.
+        </p>
 
-            <div class="bar">
-                <div class="bar-fill" style="width:1%;"></div>
-            </div>
-        </div>
+        <p>
+            As can be observed, about half of the work is a shared responsibility. Still, the other half is borne by women alone, which is remarkable, as this survey was conducted among married women or those in concubinage, which means that about half are not getting any help from their partners.
+        </p>
 
-    </div>
+        <p>
+            Now, according to the Encuesta Nacional de Ocupación y Empleo (2021), in 2021 , 40% of the workforce is women, whereas 60% correspond to men. If we combine the 3 sources of information, we can see that women, despite holding a great percentage of household duties, still make up almost reach 50% of the workforce, in San Luis Potosí.
+        </p>
 
-    <p class="fade">
-        However, a great percentage of these responsibilities is shared. The survey gave women the opportunity to report if someone was helping them, either her husband or someone else.
-    </p>
-
-    <p class="fade">
-        As can be observed, about half of the work is a shared responsibility. Still, the other half is borne by women alone, which is remarkable, as this survey was conducted among married women or those in concubinage, which means that about half are not getting any help from their partners.
-    </p>
-
-    <p class="fade">
-        Now, according to the Encuesta Nacional de Ocupación y Empleo (2021), in 2021 , 40% of the workforce is women, whereas 60% correspond to men. If we combine the 3 sources of information, we can see that women, despite holding a great percentage of household duties, still make up almost reach 50% of the workforce, in San Luis Potosí.
-    </p>
-
-    <div class="image-block fade">
-        <div class="image-placeholder">
-            CHART / GRAPHIC PLACEHOLDER
-        </div>
-
-        <div class="caption">
-            Own elaboration. Retrieved Data from National Survey on the Dynamics of Household Relationships (ENDIREH) 2021 and Encuesta Nacional de Ocupación y Empleo. Conjunto de datos: Población ocupada (INEGI) 2021.
-        </div>
-    </div>
-
-    <div class="chart-box fade">
-
-        <div class="chart-title">
-            Workforce Participation in San Luis Potosí (2021)
-        </div>
-
-        <div class="bar-group">
-            <div class="bar-label">
-                <span>Women</span>
-                <span>40%</span>
-            </div>
-
-            <div class="bar">
-                <div class="bar-fill" style="width:40%;"></div>
+        <div class="image-block">
+            <div class="image-placeholder large"></div>
+            <div class="caption">
+                Own elaboration. Retrieved Data from National Survey on the Dynamics of Household Relationships (ENDIREH) 2021 and Encuesta Nacional de Ocupación y Empleo. Conjunto de datos: Población ocupada (INEGI) 2021.
             </div>
         </div>
 
-        <div class="bar-group">
-            <div class="bar-label">
-                <span>Men</span>
-                <span>60%</span>
-            </div>
+    </section>
 
-            <div class="bar">
-                <div class="bar-fill" style="width:60%;"></div>
-            </div>
-        </div>
+    <section class="fade">
 
-    </div>
+        <blockquote>
+            “I think that most of the time, women are the ones in charge of children, or at least, it is attributed to women, even if they work. I noticed with my girlfriends, the ones worried were them, not the husbands,” said Nancy.
+        </blockquote>
 
-    <div class="quote fade">
-        “I think that most of the time, women are the ones in charge of children, or at least, it is attributed to women, even if they work. I noticed with my girlfriends, the ones worried were them, not the husbands,” said Nancy.
-    </div>
+        <h2>
+            Women are still judged by their choices
+        </h2>
 
-    <h2 class="section-title fade">
-        Women are still judged by their choices
-    </h2>
+        <p>
+            When the Mexican government announced that it would cut the classes, there was a popular opinion among social media, which was not perceived as empathetic to parents, especially mothers: schools are not daycare centres.
+        </p>
 
-    <p class="fade">
-        When the Mexican government announced that it would cut the classes, there was a popular opinion among social media, which was not perceived as empathetic to parents, especially mothers: schools are not daycare centres.
-    </p>
+        <p>
+            Nancy reflected that Mexican society is very judgemental on women and that they are criticised for anything they say.
+        </p>
 
-    <p class="fade">
-        Nancy reflected that Mexican society is very judgemental on women and that they are criticised for anything they say.
-    </p>
+        <blockquote>
+            “People, society and culture here are used to seeing moms as super heroines and, on top of that, you have to automatically accept everything. You don’t have the right to complain, to get tired, or to not always be capable of handling everything. We are also human beings. So, women are judged; anything that they say is judged.”
+        </blockquote>
 
-    <div class="quote fade">
-        “People, society and culture here are used to seeing moms as super heroines and, on top of that, you have to automatically accept everything. You don’t have the right to complain, to get tired, or to not always be capable of handling everything. We are also human beings. So, women are judged; anything that they say is judged.”
-    </div>
+        <p>
+            The secretary of the Public Education System (SEP), Mario Delgado, recognised in a press conference that cutting classes would affect women directly, but he directed the attribution of this issue to the economic system and companies, for a lack of labour flexibility, which overlooks the government's role.
+        </p>
 
-    <p class="fade">
-        The secretary of the Public Education System (SEP), Mario Delgado, recognised in a press conference that cutting classes would affect women directly, but he directed the attribution of this issue to the economic system and companies, for a lack of labour flexibility, which overlooks the government's role.
-    </p>
+        <blockquote>
+            “School is a learning territory, not a place for keeping the children at the market's convenience.”
+        </blockquote>
 
-    <div class="quote fade">
-        “School is a learning territory, not a place for keeping the children at the market's convenience.”
-    </div>
+        <p>
+            Lastly, Nancy reflected that the government is lacking not only a gender perspective when making these kinds of decisions, but also public policies, conciliation with companies and labour reforms.
+        </p>
 
-    <p class="fade">
-        Lastly, Nancy reflected that the government is lacking not only a gender perspective when making these kinds of decisions, but also public policies, conciliation with companies and labour reforms.
-    </p>
+    </section>
 
     <div class="divider"></div>
 
     <section class="methodology fade">
 
-        <h2 class="section-title">
+        <h2>
             Methodology
         </h2>
 
@@ -561,71 +517,61 @@ footer{
             This news story was about highlighting Gender inequality discussions after the Mexican government's proposal to cancel kids ‘classes because of the World Cup To raise awareness on the role of women in childcare, housework, revealing gender inequality in Mexican households, specifically in my state, San Luis Potosí.
         </p>
 
-        <h3>Primary sources:</h3>
+        <p><strong>Primary sources:</strong></p>
+
+        <ul>
+            <li>Interview with journalist Nancy Hernández</li>
+        </ul>
+
+        <p><strong>Secondary sources:</strong></p>
+
+        <ul>
+            <li>National Survey on the Dynamics of Household Relationships (ENDIREH) 2021</li>
+            <li>National Survey of Occupation and Employment (ENOE) 2021.</li>
+        </ul>
+
+        <p><strong>Analysis:</strong></p>
+
+        <ul>
+            <li>Cross referencing of data sources</li>
+            <li>Analysis of interview</li>
+            <li>Background research</li>
+        </ul>
 
         <p>
-            Interview with journalist Nancy Hernández
-        </p>
-
-        <h3>Secondary sources:</h3>
-
-        <p>
-            National Survey on the Dynamics of Household Relationships (ENDIREH) 2021
+            <strong>Key findings:</strong> Around half of the married/ in concubinage women in San Luis Potosí held childcare/housework by themselves, while the other half did it with some help. Around 1% is done by men only.
         </p>
 
         <p>
-            National Survey of Occupation and Employment (ENOE) 2021.
+            <strong>Intended impact:</strong> For people to reflect on gender inequality and make fewer judgments about women.
         </p>
 
-        <h3>Analysis:</h3>
+        <h2>
+            AI Acknowledgment
+        </h2>
 
-        <p>
-            Cross referencing of data sources
-            <br>
-            Analysis of interview
-            <br>
-            Background research
-        </p>
+        <p><strong>Use of:</strong></p>
 
-        <h3>Key findings:</h3>
+        <ul>
+            <li>Murrow AI to help to combine 3 different data sets into figure 3.</li>
+            <li>Murrow AI to brainstorm some angles for this data story.</li>
+            <li>ChatGPT to help with some Excel formulas.</li>
+            <li>ChatGPT for creating the code of this website.</li>
+            <li>Grammarly to make suggestions for correct grammar in this text.</li>
+            <li>Google Pinpoint to transcribe the interview from audio to text.</li>
+        </ul>
 
-        <p>
-            Around half of the married/ in concubinage women in San Luis Potosí held childcare/housework by themselves, while the other half did it with some help. Around 1% is done by men only.
-        </p>
-
-        <h3>Intended impact:</h3>
-
-        <p>
-            For people to reflect on gender inequality and make fewer judgments about women.
-        </p>
-
-        <h3>AI Acknowledgment</h3>
-
-        <p>
-            Use of:
-            <br><br>
-            Murrow AI to help to combine 3 different data sets into figure 3.
-            <br>
-            Murrow AI to brainstorm some angles for this data story.
-            <br>
-            ChatGPT to help with some Excel formulas.
-            <br>
-            ChatGPT for creating the code of this website.
-            <br>
-            Grammarly to make suggestions for correct grammar in this text.
-            <br>
-            Google Pinpoint to transcribe the interview from audio to text.
-        </p>
+        <h2>
+            References
+        </h2>
 
         <div class="references">
 
-            <h2 class="section-title">
-                References
-            </h2>
-
             <p>
                 INEGI (2021). Encuesta Nacional sobre la Dinámica de las Relaciones en los Hogares (ENDIREH) 2021 [Data set]. Instituto Nacional de Estadística y Geografía.
-                <br><br>
+            </p>
+
+            <p>
                 https://www.inegi.org.mx/programas/endireh/2021/#microdatos
             </p>
 
@@ -634,47 +580,52 @@ footer{
             </p>
 
             <p>
-                https://www.inegi.org.mx/sistemas/olap/proyectos/bd/encuestas/hogares/enoe/2010_pe_ed15/po.asp?s=est&proy=enoe_pe_ed15
+                https://www.inegi.org.mx/sistemas/olap/proyectos/bd/encuestas/hogares/enoe/2010_pe_ed15/po.asp?s=est&proy=enoe_pe_ed15_po&p=enoe_pe_ed15
             </p>
 
             <p>
                 Red Mujeres Unidas por la Educación. (2026, May 9). POSICIONAMIENTO DE LA RED DE MUJERES UNIDAS POR LA EDUCACIÓN Adelantar el cierre del ciclo escolar también es una decisión [Facebook Post].
-                <br><br>
-                Facebook. https://www.facebook.com/photo?fbid=1628988415408492&set=a.555393136101364
+            </p>
+
+            <p>
+                https://www.facebook.com/photo?fbid=1628988415408492&set=a.555393136101364
             </p>
 
             <p>
                 24 Morelos. (2026, May 12). LA ESCUELA NO ES GUARDERÍA, AFIRMA TITULAR DE LA SEP El titular de la SEP, Mario Delgado, señaló que la [Facebook Post].
-                <br><br>
-                Facebook. https://www.facebook.com/24morelos/videos/la-escuela-no-es-guarder%C3%ADa-afirma-titular-de-la-sepel-titular-de-la-sep-mario-de/3385537051602593/
+            </p>
+
+            <p>
+                https://www.facebook.com/24morelos/videos/la-escuela-no-es-guarder%C3%ADa-afirma-titular-de-la-sepel-titular-de-la-sep-mario-de/3385537051602593/
             </p>
 
         </div>
 
     </section>
 
-    <footer>
-        Professional editorial long-form feature.
-    </footer>
-
-</div>
 </main>
+
+<footer>
+    <div class="footer-inner">
+        Editorial long-form feature • Responsive single-file experience
+    </div>
+</footer>
 
 <script>
 
-const observer = new IntersectionObserver((entries)=>{
-    entries.forEach((entry)=>{
+const fadeElements = document.querySelectorAll('.fade');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
         if(entry.isIntersecting){
             entry.target.classList.add('visible');
         }
     });
-},{
-    threshold:0.15
+}, {
+    threshold:0.1
 });
 
-document.querySelectorAll('.fade').forEach((el)=>{
-    observer.observe(el);
-});
+fadeElements.forEach(el => observer.observe(el));
 
 </script>
 
